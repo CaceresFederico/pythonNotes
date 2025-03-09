@@ -1,0 +1,180 @@
+* {
+    font-family: "Roboto", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --blueed: #4647e3;
+    --blanco: #dcdcdc;
+    --violeta: #550548;
+    --gris: #e1e3e1;
+    --azul: #0c3c68;
+    --negro: #2c1e1a;
+    --blackgray: #333;
+    --comentgray: #4A4A4A;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    min-height: 10vh;
+    max-height: 10vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    background-color: var(--violeta);
+    z-index: 20;
+}
+
+h1 {
+    color: var(--blanco);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+h3 {
+    text-align: left;
+    padding: 10px 5px;
+    color: var(--violeta);
+    text-transform: uppercase;
+}
+
+nav {
+    min-width: 100vw;
+    max-width: 100vw;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 100vw;
+    max-width: 100vw;
+    z-index: 10;
+    position: fixed;
+    list-style: none;
+    margin-top: 10vh;
+    background-color: var(--gris);
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.nav-item {
+    padding: 15px;
+    font-weight: bold;
+    color: var(--negro);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+    /* Evita que se reduzca demasiado */
+
+}
+
+.nav-item:hover {
+    background-color: var(--violeta);
+    color: var(--blanco);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 15vh;
+}
+
+.main-container {
+    min-width: 90vw;
+    max-width: 90vw;
+    min-height: 100vh;
+}
+
+article {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0px;
+    /* border-radius: 8px; */
+
+}
+
+.article-container {
+    padding: 2px;
+    text-align: center;
+}
+
+.article-header {
+    font-size: 1.4rem;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    background-color: var(--violeta);
+    color: var(--blanco);
+}
+
+.article-text {
+    text-align: center;
+    hyphens: auto;
+    margin: 0px auto;
+    padding: 10px;
+    letter-spacing: .5px;
+}
+
+.article-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.code-container {
+    color: var(--blanco);
+    background-color: black;
+    padding: 20px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+    width: 100%;
+    overflow-x: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+}
+
+.code-container p {
+    min-width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* HIDE SCROLLBAR FOR CHROME EDGE MOZILLA */
+.hide-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.comment {
+    color: var(--comentgray);
+}
+
+@media (min-width: 768px) {
+    .nav-list {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* CSS UTILS */
+/* Allows to separete wordstext improvement  */
+/* hyphens: auto; */
+/* Handle with the letter spacing */
+/* letter-spacing: px; */
+/* white-space: nowrap; */
+/* HIDE SCROLLBAR FOR CHROME EDGE MOZILLA */
+/* .hide-scroll::-webkit-scrollbar {
+    display: none;
+} */
