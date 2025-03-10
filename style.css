@@ -16,6 +16,12 @@
     --comentgray: #4A4A4A;
 }
 
+html {
+    scroll-padding-top: 25vh;
+    scroll-behavior: smooth;
+    /* Ajusta según la altura del header */
+}
+
 body {
     width: 100%;
     overflow-x: hidden;
@@ -35,7 +41,7 @@ header {
 }
 
 h1 {
-    color: var(--blanco);
+    color: white;
     text-transform: uppercase;
     text-align: center;
     font-size: 1.8rem;
@@ -75,7 +81,15 @@ nav {
     transition: background 0.3s ease;
     flex-shrink: 0;
     /* Evita que se reduzca demasiado */
+}
 
+.nav-item a {
+    text-decoration: none;
+    color: var(--negro);
+}
+
+.nav-item a:hover {
+    color: white;
 }
 
 .nav-item:hover {
@@ -114,7 +128,7 @@ article {
     padding: 10px 0px;
     text-transform: uppercase;
     background-color: var(--violeta);
-    color: var(--blanco);
+    color: white;
 }
 
 .article-text {
@@ -144,6 +158,7 @@ article {
     display: flex;
     flex-direction: column;
     margin-bottom: 5vh;
+    /* border-radius: 8px; */
 }
 
 .code-container p {
@@ -159,12 +174,24 @@ article {
 
 .comment {
     color: var(--comentgray);
+    padding: 5px 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.bg-lemonchiffon {
+    background-color: lemonchiffon;
+    /* border-radius: 10px; */
 }
 
 @media (min-width: 768px) {
     .nav-list {
         justify-content: center;
         flex-wrap: wrap;
+    }
+    .main-container{
+        min-width: 80vw;
+        max-width: 80vw;
     }
 }
 
@@ -178,3 +205,8 @@ article {
 /* .hide-scroll::-webkit-scrollbar {
     display: none;
 } */
+/* Ajusta según la altura del header */
+/* html {
+    scroll-padding-top: 20vh; 
+}
+*/

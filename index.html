@@ -21,8 +21,9 @@
     <nav>
         <!-- <div class="nav-container"> -->
         <ul class="nav-list">
-            <li class="nav-item">Conversion types</li>
-            <li class="nav-item">Strings</li>
+            <li class="nav-item"><a href="#conversionTypes">Conversion Types</a></li>
+            <li class="nav-item"><a href="#strings">Strings</a></li>
+            <!-- <li class="nav-item">Strings</li> -->
             <li class="nav-item">Lists</li>
             <li class="nav-item">For loops</li>
             <li class="nav-item">Tuples</li>
@@ -33,12 +34,13 @@
     <main>
         <div class="main-container">
             <div class="article-container">
+
                 <article>
-                    <h2 class="article-header">Conversion types</h2>
+                    <h2 id="conversionTypes" class="article-header">Conversion types</h2>
                     <div class="article-body">
                         <h3>Implicit conversion</h3>
-                        <p class="article-text">Sometimes python parser <b>automatically converts</b> some
-                            date to handle a few circumstances</p>
+                        <p class="article-text">It is because Python always converts smaller data types to larger data
+                            types to avoid the loss of data.</p>
                         <div class="code-container">
                             <p>num_str = "50" </p>
                             <p class="comment hide-scroll"># Manually converting string to integer</p>
@@ -46,6 +48,13 @@
                             <p>print(num_int + 10)</p>
                             <p class="comment"># Output: 60</p>
                         </div>
+                        <h3>conversion error</h3>
+                        <p class="article-text bg-lemonchiffon">We get TypeError, if we try to <b>add str and int</b>.
+                            For example, '12' + 23.
+                            Python is not able to use Implicit Conversion in such conditions.
+                            Python has a solution for these types of situations which is known as <b>Explicit
+                                Conversion</b>.
+                        </p>
                         <h3>Explicit conversion</h3>
                         <p class="article-text">The programmer <b>manually converts</b> the data type using functions
                             like
@@ -65,14 +74,37 @@
                         </p>
                     </div>
                 </article>
+
                 <article>
-                    <h2 class="article-header">Lorem ipsum dolors</h2>
-                    <p class="article-text">it amet consectetur adipisicing elit. Laborum beatae commodi iure, sequi
-                        nobis eveniet
-                        veritatis harum ab, dignissimos aliquid corrupti perspiciatis alias similique neque officiis,
-                        doloremque
-                        asperiores quo quasi!</p>
+                    <h2 id="strings" class="article-header">Strings methods</h2>
+                    <div class="article-body">
+                        <p class="article-text">Returns the number of times a specified value occurs in a string</p>
+                        <b class="article-text">count()</b>
+                        <div class="code-container">
+                            <p>txt = "I love apples, apple are my favorite fruit"</p>
+                            <p>x = txt.count("apple")</p>
+                            <p>print(x)</p>
+                            <p class="comment">#Output: 2 </p>
+                        </div>
+                        <p class="article-text">Searches the string for a specified value and returns the position of
+                            where it was found</p>
+                        <b class="article-text">find()</b>
+                        <div class="code-container">
+                            <p>txt = "Hello, welcome to my world."</p>
+                            <p>x = txt.find("welcome")</p>
+                            <p>print(x)</p>
+                            <p class="comment">#Output: 7 </p>
+                        </div>
+                        <p class="article-text">Returns a trimmed version of the string</p>
+                        <b class="article-text">strip()</b>
+                        <div class="code-container">
+                            <p>txt = " banana "</p>
+                            <p>x = txt.strip()</p>
+                            <p>print("of all fruits", x, "is my favorite")</p>
+                            <p class="comment hide-scroll">#Output: of all fruits banana is my favorite </p>
+                        </div>
                 </article>
+
                 <article>
                     <h2 class="article-header">Lorem ipsum dolors</h2>
                     <p class="article-text">it amet consectetur adipisicing elit. Laborum beatae commodi iure, sequi
