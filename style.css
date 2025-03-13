@@ -19,7 +19,6 @@
 html {
     scroll-padding-top: 25vh;
     scroll-behavior: smooth;
-    /* Ajusta según la altura del header */
 }
 
 body {
@@ -78,9 +77,7 @@ nav {
     font-weight: bold;
     color: var(--negro);
     cursor: pointer;
-    transition: background 0.3s ease;
-    flex-shrink: 0;
-    /* Evita que se reduzca demasiado */
+    transition: background 0.5s ease;
 }
 
 .nav-item a {
@@ -92,7 +89,8 @@ nav {
     color: white;
 }
 
-.nav-item:hover {
+
+.nav-item:hover{
     background-color: var(--violeta);
     color: var(--blanco);
 }
@@ -114,7 +112,6 @@ article {
     display: flex;
     flex-direction: column;
     margin: 3rem 0px;
-    /* border-radius: 8px; */
 
 }
 
@@ -157,8 +154,7 @@ article {
     text-align: left;
     display: flex;
     flex-direction: column;
-    margin-bottom: 5vh;
-    /* border-radius: 8px; */
+    margin-bottom: 5vh 0vh;
 }
 
 .code-container p {
@@ -181,7 +177,7 @@ article {
 
 .bg-lemonchiffon {
     background-color: lemonchiffon;
-    /* border-radius: 10px; */
+    margin: 3vh 0vh;
 }
 
 @media (min-width: 768px) {
@@ -189,14 +185,15 @@ article {
         justify-content: center;
         flex-wrap: wrap;
     }
-    .main-container{
+
+    .main-container {
         min-width: 80vw;
         max-width: 80vw;
     }
 }
 
 /* CSS UTILS */
-/* Allows to separete wordstext improvement  */
+/* Allows to separete words text improvement  */
 /* hyphens: auto; */
 /* Handle with the letter spacing */
 /* letter-spacing: px; */

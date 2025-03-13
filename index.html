@@ -19,17 +19,14 @@
         <h1>Python notes</h1>
     </header>
     <nav>
-        <!-- <div class="nav-container"> -->
         <ul class="nav-list">
             <li class="nav-item"><a href="#conversionTypes">Conversion Types</a></li>
             <li class="nav-item"><a href="#strings">Strings</a></li>
-            <!-- <li class="nav-item">Strings</li> -->
             <li class="nav-item">Lists</li>
             <li class="nav-item">For loops</li>
             <li class="nav-item">Tuples</li>
             <li class="nav-item">Exceptions</li>
         </ul>
-        <!-- </div> -->
     </nav>
     <main>
         <div class="main-container">
@@ -78,30 +75,45 @@
                 <article>
                     <h2 id="strings" class="article-header">Strings methods</h2>
                     <div class="article-body">
-                        <p class="article-text">Returns the number of times a specified value occurs in a string</p>
                         <b class="article-text">count()</b>
+                        <p class="article-text">Returns the number of times a specified value occurs in a string</p>
                         <div class="code-container">
                             <p>txt = "I love apples, apple are my favorite fruit"</p>
                             <p>x = txt.count("apple")</p>
                             <p>print(x)</p>
                             <p class="comment">#Output: 2 </p>
                         </div>
+                        <b class="article-text">find()</b>
                         <p class="article-text">Searches the string for a specified value and returns the position of
                             where it was found</p>
-                        <b class="article-text">find()</b>
                         <div class="code-container">
                             <p>txt = "Hello, welcome to my world."</p>
                             <p>x = txt.find("welcome")</p>
                             <p>print(x)</p>
                             <p class="comment">#Output: 7 </p>
                         </div>
-                        <p class="article-text">Returns a trimmed version of the string</p>
                         <b class="article-text">strip()</b>
+                        <p class="article-text">Returns a trimmed version of the string</p>
                         <div class="code-container">
                             <p>txt = " banana "</p>
                             <p>x = txt.strip()</p>
                             <p>print("of all fruits", x, "is my favorite")</p>
                             <p class="comment hide-scroll">#Output: of all fruits banana is my favorite </p>
+                        </div>
+
+                        <b class="article-text">replace()</b>
+                        <p class="article-text">The replace() method replaces a specified phrase with another specified
+                            phrase.</p>
+                        <p class="article-text bg-lemonchiffon">
+                            <b>Note: </b>All occurrences of the specified phrase will be replaced, if nothing else is
+                            specified.
+                        </p>
+                        <div class="code-container">
+                            <p>txt = "one one was a race horse, two two was one too."</p>
+                            <p>x = txt.replace("one", "three")</p>
+                            <p>print(x)</p>
+                            <p class="comment hide-scroll">#Output: three three was a race horse, two two was three
+                                too."</p>
                         </div>
                 </article>
 
