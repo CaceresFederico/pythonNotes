@@ -53,6 +53,11 @@ h3 {
     text-transform: uppercase;
 }
 
+h4{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--blueed);
+}
 nav {
     min-width: 100vw;
     max-width: 100vw;
@@ -67,7 +72,7 @@ nav {
     position: fixed;
     list-style: none;
     margin-top: 10vh;
-    background-color: var(--gris);
+    background-color: lemonchiffon;
     white-space: nowrap;
     overflow-x: auto;
 }
@@ -79,20 +84,16 @@ nav {
     cursor: pointer;
     transition: background 0.5s ease;
 }
-
 .nav-item a {
     text-decoration: none;
     color: var(--negro);
 }
-
-.nav-item a:hover {
-    color: white;
-}
-
-
-.nav-item:hover{
+.nav-item:hover {
     background-color: var(--violeta);
     color: var(--blanco);
+}
+.nav-item:hover a{
+    color: white;
 }
 
 main {
@@ -126,12 +127,12 @@ article {
     text-transform: uppercase;
     background-color: var(--violeta);
     color: white;
+    margin-bottom: 2vh;
 }
 
 .article-text {
     text-align: center;
     hyphens: auto;
-    margin: 0px auto;
     padding: 10px;
     letter-spacing: .5px;
 }
@@ -145,8 +146,8 @@ article {
 
 .code-container {
     color: var(--blanco);
-    background-color: black;
-    padding: 20px 10px;
+    background-color: black ;
+    padding: 20px;
     font-family: 'Courier New', Courier, monospace;
     white-space: pre;
     width: 100%;
@@ -154,30 +155,35 @@ article {
     text-align: left;
     display: flex;
     flex-direction: column;
-    margin-bottom: 5vh 0vh;
+    margin-bottom: 5vh;
 }
 
 .code-container p {
+    font-family: 'Courier New', Courier, monospace;
     min-width: 100%;
     max-width: 100%;
     overflow-x: auto;
+    line-height: 25px;
 }
 
 /* HIDE SCROLLBAR FOR CHROME EDGE MOZILLA */
 .hide-scroll::-webkit-scrollbar {
     display: none;
 }
-
+.px-2{
+    padding: 20px 0px;
+}
 .comment {
     color: var(--comentgray);
     padding: 5px 0px;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
-.bg-lemonchiffon {
+.notes {
     background-color: lemonchiffon;
-    margin: 3vh 0vh;
+    margin: 1.5vh 0vh;
+    width: 100%;
+    border: 1px solid black;
 }
 
 @media (min-width: 768px) {

@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <!-- ICON -->
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <title>Notes py</title>
+    <title>Notes Py</title>
 </head>
 
 <body>
@@ -31,12 +33,11 @@
     <main>
         <div class="main-container">
             <div class="article-container">
-
                 <article>
                     <h2 id="conversionTypes" class="article-header">Conversion types</h2>
                     <div class="article-body">
                         <h3>Implicit conversion</h3>
-                        <p class="article-text">It is because Python always converts smaller data types to larger data
+                        <p class="article-text">Python always converts smaller data types to larger data
                             types to avoid the loss of data.</p>
                         <div class="code-container">
                             <p>num_str = "50" </p>
@@ -46,7 +47,7 @@
                             <p class="comment"># Output: 60</p>
                         </div>
                         <h3>conversion error</h3>
-                        <p class="article-text bg-lemonchiffon">We get TypeError, if we try to <b>add str and int</b>.
+                        <p class="article-text notes">We get TypeError, if we try to <b>add str and int</b>.
                             For example, '12' + 23.
                             Python is not able to use Implicit Conversion in such conditions.
                             Python has a solution for these types of situations which is known as <b>Explicit
@@ -75,7 +76,7 @@
                 <article>
                     <h2 id="strings" class="article-header">Strings methods</h2>
                     <div class="article-body">
-                        <b class="article-text">count()</b>
+                        <h4>count ( )</h4>
                         <p class="article-text">Returns the number of times a specified value occurs in a string</p>
                         <div class="code-container">
                             <p>txt = "I love apples, apple are my favorite fruit"</p>
@@ -83,7 +84,7 @@
                             <p>print(x)</p>
                             <p class="comment">#Output: 2 </p>
                         </div>
-                        <b class="article-text">find()</b>
+                        <h4>find ( )</h4>
                         <p class="article-text">Searches the string for a specified value and returns the position of
                             where it was found</p>
                         <div class="code-container">
@@ -92,7 +93,7 @@
                             <p>print(x)</p>
                             <p class="comment">#Output: 7 </p>
                         </div>
-                        <b class="article-text">strip()</b>
+                        <h4>strip ( )</h4>
                         <p class="article-text">Returns a trimmed version of the string</p>
                         <div class="code-container">
                             <p>txt = " banana "</p>
@@ -101,10 +102,10 @@
                             <p class="comment hide-scroll">#Output: of all fruits banana is my favorite </p>
                         </div>
 
-                        <b class="article-text">replace()</b>
-                        <p class="article-text">The replace() method replaces a specified phrase with another specified
+                        <h4>replace ( )</h4>
+                        <p class="article-text">Replaces a specified phrase with another specified
                             phrase.</p>
-                        <p class="article-text bg-lemonchiffon">
+                        <p class="article-text notes">
                             <b>Note: </b>All occurrences of the specified phrase will be replaced, if nothing else is
                             specified.
                         </p>
@@ -112,8 +113,44 @@
                             <p>txt = "one one was a race horse, two two was one too."</p>
                             <p>x = txt.replace("one", "three")</p>
                             <p>print(x)</p>
-                            <p class="comment hide-scroll">#Output: three three was a race horse, two two was three
-                                too."</p>
+                            <p class="comment">#Output: three three was a race horse, two two was three too."</p>
+                        </div>
+
+                        <h4>join ( )</h4>
+                        <p class="article-text"><b>Takes all items in an iterable </b>and joins them into one
+                            string.</p>
+                        <p class="article-text notes"><b>Note: </b>A string must be specified as the separator.</p>
+                        <div class="code-container">
+                            <p>myTuple = ("John", "Peter", "Vicky")</p>
+                            <p>x = "#".join(myTuple)</p>
+                            <p>print(x)</p>
+                            <p class="comment">#Output: John#Peter#Vicky</p>
+                        </div>
+
+                        <h4>slicing ( )</h4>
+                        <p class="article-text">You can return a range of characters by using the slice syntax.
+                            Specify the start index and the end index, separated by a colon, to return a part of the
+                            string.</p>
+                        <div class="code-container">
+                            <p>a[start:stop] # items start through stop-1</p>
+                            <p>a[start:] # items start through the rest of the array</p>
+                            <p>a[:stop] # items from the beginning through stop-1</p>
+                            <p>a[:] # a copy of the whole array</p>
+                        </div>
+                        <b class="px-2">The other feature is that start or stop may be a negative number, which means it
+                            counts from
+                            the end of the array instead of the beginning. So:</b>
+                        <div class="code-container">
+                            <p>a[-1] # last item in the array</p>
+                            <p>a[-2:] # last two items in the array</p>
+                            <p>a[:-2] # everything except the last two items</p>
+                        </div>
+                        <b class="px-2">Similarly, step may be a negative number:</b>
+                        <div class="code-container">
+                            <p>a[::-1] # all items in the array, reversed</p>
+                            <p>a[1::-1] # the first two items, reversed</p>
+                            <p>a[:-3:-1] # the last two items, reversed</p>
+                            <p>a[-3::-1] # everything except the last two items, reversed</p>
                         </div>
                 </article>
 

@@ -1,89 +1,44 @@
-# name = "John Smith"
-# age = 20
-# new =True
-# print("Patient data: \n")
-# print("Name:", name)
-# print("Age:", age)
-# print("New patient:", new, "\n")
+# ♦️ STRING MANIPULATION EXERCISES
+# 1. CREATE A FUNCTION THAT RECIEVES A STRING AND RETURN THE INVERTED STRING
+def invert_string(string):
+    inverted_string = ""
+    for char in string:
+        inverted_string = char + inverted_string
+    return inverted_string
+# print(invert_string("Federico"))
 
+# 1.1 ⬆️ OPTIMIZED USING JOIN AND REVERSED
+def reversed_string_converter(string):
+    return "".join(reversed(string))
+# print(reversed_string_converter("This is a optimized way"))
 
-# INPUTS
-# name = input("Insert your name please ")
-# print("Hello " + name)
+# 1.2 ⬆️ SHORT SYNTAX USING SLICING [::-1]
+def reversed_string_slicing (string):
+    return  string[::-1]
+# print(reversed_string_slicing("Shorter and optimized approach"))
 
-
-# TYPE CONVERTION
-# born_year = input("Insert your born year ")
-# Convert the input str to int
-# age = 2025 - int(born_year) 
-# print("You are",age,"years old")
-#some built in functions
-#int()
-#float()
-#str()
-#bool()
-
-
-# EXERCISE: built aplication that recieves 2 nums and return the sum
-# print ("Sum calculator")
-# first_value = float(input("Insert first value "))
-# second_value = float(input("Insert second value "))
-# sum = first_value + second_value
-# Cannot concatenate str with float, we need to convert the float to str before 
-# print("Sum: " + str(sum))
-
-
-# STRINGS METHODS
-# str are inmutable doesnt change the original value
-# course = "Python for beginners"
-# returns true or false
-# print("Python" in course)
-# print(course.find("thon"))
-# print(course.replace("for", "4"))
-# print(course)
-# Returns the number of times a specified value occurs in a string
-#count()
-
-
-# STRING MANIPULATION EXERCISES
-# ♦️ CREATE A FUNCTION THAT RECIEVES A STRING AND RETURN THE INVERTED STRING
-stringToInvert = "Federico"
-# for letter in stringToInvert:
-#     stringInverted = letter + stringInverted
-# print(stringInverted)
-
-# ⬆️ OPTIMIZED WITH JOIN AND REVERSED
-# reversedString = "".join(reversed(stringToInvert))
-# print(reversedString)
-
-# ⬆️ MORE OPTIMIZED AND SHORT SLICING SYNTAX [::-1]
-# invertedString = stringToInvert[::-1]
-# print(invertedString)
-
-
-# ♦️ COUNT VOCALS IN STRING
+# 2. COUNT VOCALS IN STRING
 string = "Fedeaawweweei"
 vocals = ["a","e","i","o","u"]
 vocalsCount = 0
 vocalsFounded = []
-# for char in string.lower():
-#     if char in vocals:
-#         vocalsCount +=1
-#         vocalsFounded.append(char)
+for char in string.lower():
+    if char in vocals:
+        vocalsCount +=1
+        vocalsFounded.append(char)
 # print(vocalsCount)
 # print(vocalsFounded)
 
-# ♦️ DELETE WHITE SPACES USING REPLACE
+# 3. DELETE WHITE SPACES USING REPLACE
 sentence = "Python its a languaje multiplatform"
 # sentenceFormated = sentence.replace(" ", "")
 # print(sentenceFormated)
 
-# ⬆️DELETING WHITE SPACES USING JOIN AND SPLIT
+# 3.1 ⬆️ DELETING WHITE SPACES USING JOIN AND SPLIT
 sentenceFormated = "".join(sentence.split())
 # print(sentenceFormated)
 
-# ♦️ CREATE A FUNCTION THAT DETECT FOR PALINDROMES
-# FIRST APPROACH
+# 4. CREATE A FUNCTION THAT DETECT FOR PALINDROMES
 possiblePalindrome = "federico"
 def checkPalindrome(posiblePalindrome):
     rever = "".join(reversed(posiblePalindrome))
@@ -93,43 +48,57 @@ def checkPalindrome(posiblePalindrome):
         return False
 # print(checkPalindrome(possiblePalindrome))
 
-# ⬆️⬆️ USING SLICING SYNTAX [::-1] REDUCED
+# 4.1 ⬆️⬆️ USING SLICING SYNTAX [::-1] REDUCED
 def check_palindrome(word):
     return word == word[::-1]
 # print(check_palindrome("reconocer"))
 
-# CREATE A FUNCTION THAT DELETE ALL OCURRENCES
-myString = "Me gusta Python"
+# 5. CREATE A FUNCTION THAT DELETE ALL OCURRENCES
+my_string = "Me gusta Python"
 def replace_word(text,old_world, new_world):
     return text.replace(old_world, new_world)
-# print(replace_word(myString, "Python", "Java"))
+# print(replace_word(my_string, "Python", "Java"))
 
-# WORDS COUNTER 
+# 6. WORDS COUNTER 
 word_counter = sentence.split()
 # print(len(word_counter))
 
-# INTERLEAVE CHARACTERS
+# 7. INTERLEAVE CHARACTERS
 def separete_characters(string):
-    return "-".join(string)
+    return "-".join(string).lower()
 # print(separete_characters(sentence))
 
+# 8. EXTRACT NUMBERS FROM STRING
+clean_string = []
+numbers_detected = []
+def extract_numbers(string):
+    for char in string:
+        if not char.isdigit():
+            clean_string.append(char)
+        else:
+            numbers_detected.append(char)
+    return "Clean string: ",clean_string, "Numbers detected: ",numbers_detected
+# print(extract_numbers("F3Der1c0"))
 
-# ARITHMETIC OPERATORS
-# / division with float
-# // division integer
+# 9. TITLE FORMAT
+# CONVERT FIRST LETTER OF EVERY WORD IN UPPERCASE
+def title_text (text):
+    return text.title()
+# print(title_text("fe fe fe ef ef"))
 
 
-# IF SENTENCES
-# temp = 25
-# if (temp >= 30):
-#     print("Temperature is so high")
-#     print("Summer sucks!")
-# elif (temp <= 20):
-#     print("Temperature is cold")
-# else:
-#     print("We dont know the temp")
-    
-    
+# 10. CONVERT LETTER TO LEET SPEAK
+# EXAMPLE: "Hello world" → "H3110 W0r1d"
+def leet_speak_converter (string):
+    string = string.lower()
+    string = string.replace("a", "4")
+    string = string.replace("e", "3")
+    string = string.replace("i", "1")
+    string = string.replace("o", "0")
+    return string
+# print(leet_speak_converter("Federico")) 
+
+
 # EXERCISE Create a program that receive weight and choose if are kgs or lbs inserting the letter k, K or l,L
 # print("First i need your weight")
 # weight = float(input("Weight: "))
@@ -138,23 +107,7 @@ def separete_characters(string):
 #     print("Your weight converted to Lbs: ", weight/0.45)
 # else:
 #     print("Your weight converted to Kgs: ",weight*0.45)
-
-
-# WHILE LOOPS
-# i = 1
-# while (i<=10):
-#     # multiply number with str its possible
-#     print(i * "*")
-#     i += 1
     
-    
-# LIST = ARRAYS
-# names = ["Federico", "Hernan", "Lucas", "Esteban", "Damian"]
-# modifying values
-# names[2] = "juan"
-# print(names)
-# print(names[0:3])
-
 
 # LIST
 # Store indexed data [0]
